@@ -1,0 +1,9 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=True",
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "techconfsb_SERVICEBUS": "Endpoint=sb://techconfsb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=DKwlnq0mijXGU0SzTKsBi6mfPIureoDkPZpYyae63A8="
+  }
+}
+
