@@ -70,4 +70,4 @@ Complete a month cost analysis of each Azure resource to give an estimate total 
 | *Azure Function App*   | Consuption | Free        |
 
 ## Architecture Explanation
-This is a placeholder section where you can provide an explanation and reasoning for your architecture selection for both the Azure Web App and Azure Function.
+I selected Azure Web App and Azure Function instead of Azure virtual machine cause we don not require much customization and azure web apps and azure fuctions can be scaled easily according to our needs these can be scaled up in peak season and scaled down in other seasons this architecture is very cost efficient and here every penny is used carefully .
