@@ -10,7 +10,6 @@ click==7.1.2
 colorama==0.4.3
 cryptography==2.9.2
 Flask==1.1.2
-Flask-SQLAlchemy==2.4.1
 idna==2.9
 isodate==0.6.0
 isort==4.3.21
