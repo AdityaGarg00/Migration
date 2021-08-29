@@ -61,14 +61,14 @@ You will need to install the following locally:
 ## Monthly Cost Analysis
 Complete a month cost analysis of each Azure resource to give an estimate total cost using the table below:
 
-| Azure Resource | Service Tier | Monthly Cost |
-| ------------ | ------------ | ------------ |
-| *Azure Postgres Database* | Basic gen5 1 vcore 5gb storage   |   2188.99 INR   |
-| *Azure Service Bus*   |  Basic  | 3.71 INR    |
-| *Azure App service*   |  F1:free | Free        |
-| *Azure Storage*   |  Standard | 1543.93 INR  |
-| *Azure Function App*   | Consuption | Free        |
-| *Azure Application Insite*   | NA | Free        |
+|Sr.No.| Azure Resource | Service Tier | Monthly Cost |
+|1| ------------ | ------------ | ------------ |
+|2| *Azure Postgres Database* | Basic gen5 1 vcore 5gb storage   |   2188.99 INR   |
+|3| *Azure Service Bus*   |  Basic  | 3.71 INR    |
+|4| *Azure App service*   |  F1:free | Free        |
+|5| *Azure Storage*   |  Standard | 1543.93 INR  |
+|6| *Azure Function App*   | Consuption | Free        |
+|7| *Azure Application Insite*   | NA | Free        |
 
 ## Architecture Explanation
 I selected Azure Web App and Azure Function instead of Azure virtual machine cause we don not require much customization and azure web apps and azure fuctions can be scaled easily according to our needs these can be scaled up in peak season and scaled down in other seasons this architecture is very cost efficient and here every penny is used carefully .
