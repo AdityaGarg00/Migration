@@ -21,13 +21,14 @@ def main(msg: func.ServiceBusMessage):
     cur = conn.cursor()
 
     try:
-        # Get notification message and subject from database using the notification_id
-        result = cur.execute("SELECT subject, message FROM notification WHERE id={};".format(notification_id))
-        subject = result[0][0]
-        body = result[0][1]
+        cur.execute("SELECT subject, message FROM notification WHERE id={};".format(notification_id))
+        rows=cur.fetchall()
+        rows=rows[0]
+        subject = str(rows[0])
+        body = str(rows[1])
         # Get attendees email and name
-        attendees = cur.execute("SELECT email, first_name FROM attendee;")
-
+        cur.execute("SELECT email, first_name FROM attendee;")
+        attendees = cur.fetchall()
         # Loop through each attendee and send an email with a personalized subject
         for (email, first_name) in attendees:
             mail = Mail(
@@ -44,7 +45,7 @@ def main(msg: func.ServiceBusMessage):
         status = "Notified {} attendees".format(len(attendees))
 
         # Update the notification table by setting the completed date and updating the status with the total number of attendees notified
-        cur.execute("UPDATE notification SET status = '{}', completed_date = '{}' WHERE id = {};".format(status, datetime.utcnow(), notification_id))        
+        cur.execute("UPDATE notification SET status = '{}', completed_date = '{}' WHERE id = {};".format(status, datetime.utcnow() , notification_id))        
         conn.commit()
     except (Exception, psycopg2.DatabaseError) as error:
         logging.error(error)
